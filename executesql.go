@@ -49,7 +49,7 @@ func (conn *Conn) executeSqlSybase125(query string, params ...driver.Value) ([]*
 		return nil, fmt.Errorf("Incorrect number of params, expecting %d got %d", numParams, len(params))
 	}
 
-	statement += statusRowSybase125
+	//statement += statusRowSybase125
 	sql := strings.Replace(query, "?", "$bindkey", -1)
 	re, _ := regexp.Compile(`(?P<bindkey>\$bindkey)`)
 	matches := re.FindAllSubmatchIndex([]byte(sql), -1)
