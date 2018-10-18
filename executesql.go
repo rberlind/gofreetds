@@ -101,7 +101,8 @@ func parseParams(params ...driver.Value) (string, string, error) {
 }
 
 func quote(in string) string {
-	return strings.Replace(in, "'", "''", -1)
+	//return strings.Replace(in, "'", "''", -1)
+	return in
 }
 
 func go2SqlDataType(value interface{}) (string, string, error) {
